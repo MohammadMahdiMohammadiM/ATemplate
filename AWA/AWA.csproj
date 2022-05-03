@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<Nullable>enable</Nullable>
+		<TargetFramework>net6.0</TargetFramework>
+		<!--<ImplicitUsings>enable</ImplicitUsings>-->
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Artan\Artan.csproj" />
+		<ProjectReference Include="..\Domain\Domain.csproj" />
+		<ProjectReference Include="..\Persistence\Persistence.csproj" />
+		<ProjectReference Include="..\Resourses\Resourses.csproj" />
+		<ProjectReference Include="..\ViewModels\ViewModels.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\js\" />
+	  <Folder Include="wwwroot\lib\" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,39 @@
+﻿<header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-black bg-opacity-10">
+            <div class="container-fluid">
+                <img src="~/images/android-chrome-512x512.png" width="45" alt="Artan Arian" class="d-inline-block align-middle" asp-append-version=true />
+                <a class="navbar-brand text-danger " href="#"><b><i>A</i>app</b></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a asp-page="Index" class="nav-link">خانه</a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-page="Contact" class="nav-link">تماس با آرتان</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-success" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                منو
+                            </a>
+                            <ul class="dropdown-menu bg-success bg-opacity-50 mt-2" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#"><b>حساب کاربری</b></a></li>
+                                <li><a class="dropdown-item" href="#">لیست سفارشات</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#"><u>خروج</u></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-page="About" class="nav-link">درباره ی آرتان</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="کلمه ی مورد نظر..." aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">جستجو</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
