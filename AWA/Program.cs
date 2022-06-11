@@ -1,3 +1,4 @@
+using Infrastructure.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -41,6 +42,9 @@ app.UseRouting();
 //app.UseAuthentication();
 
 //app.UseAuthorization();
+
+app.UseMiddleware
+    <Infrastructure.Middlewares.CultureCookieHandlerMiddleware>();
 
 app.MapRazorPages();
 

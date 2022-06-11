@@ -1,20 +1,27 @@
 ﻿@page
 @model AWA.Pages.IndexModel
 @{
-	var title = "خانه";
+	var pageTitle = 
+	    Resourses.PageTitles.Index;
 
-	ViewData["Title"] = title;
+	ViewData["pageTitle"] = pageTitle;
 }
 
 <h3>
-	@(title)
+	@(pageTitle)
 </h3>
 
 <hr />
 
 <div class="row">
 	<div class="col">
-		به اولین صفحه از اولین پروژه Artan خوش آمدید!
+		@(Resourses.DataDictionary.SourceCode)
+
+		<br />
+
+		<div dir="ltr">
+			<a href="http://github.com/mohammadmahdimohammadim/atemplate" target="_blank" >http://Github.com/MohammadMahdiMohammadiM/ATemplate</a>
+		</div>
 	</div>
 </div>
 

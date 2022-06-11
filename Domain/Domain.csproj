@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<Nullable>enable</Nullable>
-		<TargetFramework>net6.0</TargetFramework>
-		<!--<ImplicitUsings>enable</ImplicitUsings>-->
-	</PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <!--<ImplicitUsings>enable</ImplicitUsings>-->
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\Artan\Artan.csproj" />
-		<ProjectReference Include="..\Resourses\Resourses.csproj" />
-	</ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Artan\Artan.csproj" />
+    <ProjectReference Include="..\Resourses\Resourses.csproj" />
+  </ItemGroup>
 
 </Project>

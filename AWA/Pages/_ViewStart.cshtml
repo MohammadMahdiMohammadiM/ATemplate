@@ -1,3 +1,30 @@
-﻿@{
+﻿@*@{
 	Layout = "Layouts/_Layout";
-}
+}*@
+
+
+@{
+    var currentCultureName =
+        System.Threading.Thread.CurrentThread
+        .CurrentUICulture.TwoLetterISOLanguageName;
+
+    switch (currentCultureName)
+    {
+        case "fa":
+        case "ar":
+            {
+                Layout =
+                    "Layouts/Rtl/_Layout";
+
+                break;
+            }
+
+        default:
+            {
+                Layout =
+                    "Layouts/Ltr/_Layout";
+
+                break;
+            }
+    }
+}	

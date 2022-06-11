@@ -1,23 +1,38 @@
 ﻿@page
 @model AWA.Pages.ContactModel
 @{
-    var title = "تماس با ما";
+    var pageTitle =
+        Resourses.PageTitles.Contact;
 
-    ViewData["Title"] = title;
+    ViewData["pageTitle"] = pageTitle;
 }
 
 <h3>
-    @(title)
+    @(pageTitle)
 </h3>
 
 <hr />
 
 <div class="row">
     <div class="col">
-        شماره تلفن همراه:
+        @(Resourses.DataDictionary.CellPhoneNumber)
         <a href="tel:09375083081">09375083081</a>
         <br />
-        نشانی پست الکترونیک:
+        @(Resourses.DataDictionary.EmailAddress)
         <a href="mailto:mmohammadimolasarayi@gmail.com" target="_blank">mmohammadimolasarayi@gmail.com</a>
     </div>
+</div>
+
+<div class="col">
+    <h2>
+        @(Resourses.DataDictionary.SocialNetworks) : 
+    </h2>
+
+    <ul>
+        <li>linkedin: <a href="https://www.linkedin.com/in/mohammadmahdimohammadimolasarayi" target="_blank">https://www.Linkedin.com/in/MohammadMahdiMohammadiMolasarayi</a></li>
+        <li>github: <a href="https://www.github.com/mohammadmahdimohammadim" target="_blank">https://www.Github.com/MohammadMahdiMohammadiM</a></li>
+        <li>stackoverflow: <a href="https://www.stackoverflow.com/users/17306200/mohammad-mahdi-mohammadi-m" target="_blank">https://www.Stackoverflow.com/Users/17306200/Mohammad-Mahdi-Mohammadi-M</a></li>
+        <li>telegram: <a href="https://t.me/ArtanArian" target="_blank">https://T.me/ArtanArian</a></li>
+        <li>instagram: <a href="https://www.instagram.com/_artan.arian_" target="_blank">https://www.Instagram.com/_artan.arian_</a></li>
+    </ul>
 </div>

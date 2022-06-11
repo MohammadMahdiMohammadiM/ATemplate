@@ -1,22 +1,21 @@
 ﻿@page
 @model AWA.Pages.AboutModel
 @{
-    var title = "درباره ی آرتان";
+    var pageTitle =
+        Resourses.PageTitles.About;
 
-    ViewData["Title"] = title;
+    ViewData["pageTitle"] = pageTitle;
 }
 
 <h3>
-    @(title)
+    @(pageTitle)
 </h3>
 
 <hr />
 
 <div class="row">
     <div class="col">
-        من آرتان هستم(محمد مهدی محمدی) ،برنامه نویس این پروژه
-        و
-        این پروژه، اولین پروژه وب من می باشد
+        @(Resourses.DataDictionary.SiteAuthor)
     </div>
     <div class="col">
         <img src="~/images/Artan.jpg" width="200px" height="200px" alt="ArtanArian" asp-append-version=true />

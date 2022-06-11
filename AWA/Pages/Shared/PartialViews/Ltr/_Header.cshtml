@@ -1,0 +1,58 @@
+﻿<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-black bg-opacity-10">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-page="/index">
+                @(Resourses.DataDictionary.SiteTitle)
+            </a>
+
+            <img src="~/images/android-chrome-512x512.png" width="45" alt="Artan Arian" class="d-inline-block align-middle" asp-append-version=true />
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-page="/Index">
+                            @(Resourses.PageTitles.Index)
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                       <a class="nav-link text-dark" asp-page="/Contact">
+							@(Resourses.PageTitles.Contact)
+						</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-success" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            @(Resourses.ButtonCaptions.Menu)
+                        </a>
+                        <ul class="dropdown-menu bg-success bg-opacity-100 mt-2" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#"><b>@(Resourses.DataDictionary.AccountName)</b></a></li>
+                            <li><a class="dropdown-item" href="#">@(Resourses.DataDictionary.OrderList)</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><u>@(Resourses.ButtonCaptions.Exit)</u></a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-page="/About">
+							@(Resourses.PageTitles.About)
+						</a>
+                    </li>
+
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="@(Resourses.DataDictionary.SearchHere)" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">@(Resourses.DataDictionary.Search)</button>
+                </form>
+
+                <partial name="PartialViews/_ChangeCulture" />
+            </div>
+        </div>
+    </nav>
+</header>
