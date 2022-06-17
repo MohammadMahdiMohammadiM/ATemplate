@@ -17,16 +17,24 @@ namespace Infrastructure.Middlewares
 
         public static Microsoft.AspNetCore.Builder.IApplicationBuilder
 
+           UseCultureCookieHandlerMiddlware(this Microsoft.AspNetCore.Builder.IApplicationBuilder builder)
+        {
+            return builder.UseMiddleware<CultureCookieHandlerMiddleware>();
+        }
+
+        public static Microsoft.AspNetCore.Builder.IApplicationBuilder
+
             UseGlobalException(this Microsoft.AspNetCore.Builder.IApplicationBuilder builder)
         {
             return builder.UseMiddleware<GlobalEceptionHandlerMiddleware>();
         }
 
-        public static Microsoft.AspNetCore.Builder.IApplicationBuilder
+        
+        //public static Microsoft.AspNetCore.Builder.IApplicationBuilder
 
-           UseCultureCookieHandlerMiddlware(this Microsoft.AspNetCore.Builder.IApplicationBuilder builder)
-        {
-            return builder.UseMiddleware<CultureCookieHandlerMiddleware>();
-        }
+        //   UseCultureCookieHandlerMiddlware(this Microsoft.AspNetCore.Builder.IApplicationBuilder builder)
+        //{
+        //    return builder.UseMiddleware<CultureCookieHandlerMiddleware>();
+        //}
     }
 }

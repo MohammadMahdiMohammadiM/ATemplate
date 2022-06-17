@@ -5,16 +5,19 @@ namespace Infrastructure.Middlewares
     public class CustomStaticFilesHandlerMiddleware : object
     {
         public CustomStaticFilesHandlerMiddleware
-            (Microsoft.AspNetCore.Http.RequestDelegate next) : base()
+            (Microsoft.AspNetCore.Http.RequestDelegate next,
+            Microsoft.Extensions.Hosting.IHostEnvironment hostEnvironment) : base()
         {
             Next = next;
+            HostEnvironment = hostEnvironment;
         }
 
         private Microsoft.AspNetCore.Http.RequestDelegate Next { get; }
 
+        private Microsoft.Extensions.Hosting.IHostEnvironment HostEnvironment { get; }
+
         public async System.Threading.Tasks.Task
-        InvokeAsync(Microsoft.AspNetCore.Http.HttpContext httpContext,
-            Microsoft.Extensions.Hosting.IHostEnvironment hostEnvironment)
+          InvokeAsync(Microsoft.AspNetCore.Http.HttpContext httpContext)
         {
             string requestPath =
                 httpContext.Request.Path;
@@ -34,10 +37,10 @@ namespace Infrastructure.Middlewares
                 requestPath[1..];
 
             var rootPath =
-                hostEnvironment.ContentRootPath;
+                HostEnvironment.ContentRootPath;
 
             var physicalPathName =
-                System.IO.Path.Combine(rootPath, "wwwroot", requestPath);
+                System.IO.Path.Combine(path1: rootPath, path2: "wwwroot", path3: requestPath);
 
             if (System.IO.File.Exists(physicalPathName) == false)
             {
@@ -95,7 +98,8 @@ namespace Infrastructure.Middlewares
 
             }
 
-            await httpContext.Response.SendFileAsync(fileName: physicalPathName);
+            await httpContext.Response
+                .SendFileAsync(fileName: physicalPathName);
         }
     }
 }

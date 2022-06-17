@@ -37,8 +37,8 @@ else
 
 app.UseHttpsRedirection();
 
-//app.UseStaticFiles();
-app.UseCustomStaticFiles();
+app.UseStaticFiles();
+//app.UseCustomStaticFiles();
 
 app.UseRouting();
 
