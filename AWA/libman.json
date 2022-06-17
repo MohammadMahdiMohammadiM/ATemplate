@@ -35,7 +35,7 @@
 		},
 
 		{
-			"library": "flag-icon-css@6.4.5",
+			"library": "flag-icon-css@6.5.1",
 			"destination": "wwwroot/lib/flag-icon-css"
 		}
 	]

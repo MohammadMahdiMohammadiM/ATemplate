@@ -17,6 +17,8 @@ var builder =
     Microsoft.AspNetCore.Builder
     .WebApplication.CreateBuilder(options: webApplicationOptions);
 
+builder.Services.AddHttpContextAccessor();
+
 builder.Services.AddRazorPages();
 
 var app =
@@ -35,7 +37,8 @@ else
 
 app.UseHttpsRedirection();
 
-app.UseStaticFiles();
+//app.UseStaticFiles();
+app.UseCustomStaticFiles();
 
 app.UseRouting();
 
@@ -43,9 +46,10 @@ app.UseRouting();
 
 //app.UseAuthorization();
 
-app.UseMiddleware
-    <Infrastructure.Middlewares.CultureCookieHandlerMiddleware>();
+app.UseCultureCookieHandlerMiddlware();
 
 app.MapRazorPages();
+
+app.UseGlobalException();
 
 app.Run();

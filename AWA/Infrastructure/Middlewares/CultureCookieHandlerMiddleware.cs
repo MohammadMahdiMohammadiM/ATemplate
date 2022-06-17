@@ -68,7 +68,7 @@ namespace Infrastructure.Middlewares
         {
             var cultureName =
                 httpContext.Request.Cookies[key: CookieName]?
-                .Substring(startIndex: 0, length: 2)
+                [..2]
                 .ToLower();
 
             switch (cultureName)

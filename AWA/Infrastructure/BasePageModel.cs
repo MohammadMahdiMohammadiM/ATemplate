@@ -3,9 +3,8 @@
     public abstract class BasePageModel :
         Microsoft.AspNetCore.Mvc.RazorPages.PageModel
     {
-        public BasePageModel() :base()
+        public BasePageModel() : base()
         {
-
         }
     }
 }
